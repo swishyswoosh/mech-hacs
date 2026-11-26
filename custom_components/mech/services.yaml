@@ -1,0 +1,103 @@
+connect:
+  name: Connect droid
+  description: Explicitly attempt to connect to an enrolled droid; this may wake it.
+  fields: &target_fields
+    droid_id:
+      name: Droid ID
+      required: true
+      selector: {text: {}}
+    config_entry_id:
+      name: Controller service
+      description: Required only when more than one configured service contains the same droid ID.
+      selector: {config_entry: {integration: mech}}
+    idempotency_key:
+      name: Retry key
+      description: Reuse only for retries of the exact same logical request.
+      selector: {text: {}}
+    wait:
+      name: Return when
+      default: accepted
+      selector: {select: {options: [accepted, terminal]}}
+    timeout_ms:
+      name: Maximum wait
+      default: 10000
+      selector: {number: {min: 1, max: 30000, unit_of_measurement: ms, mode: box}}
+disconnect:
+  name: Disconnect droid
+  description: Stop activity, request normal sleep, then close Bluetooth after confirmation.
+  fields: *target_fields
+stop:
+  name: Stop droid activity
+  description: Request priority STOP. Does not disconnect Bluetooth or put the droid to sleep.
+  fields: *target_fields
+play_sound:
+  name: Play sound
+  description: Play a catalog sound. Omit the sound ID to use the sound select entity. No automatic wake by default.
+  fields:
+    <<: *target_fields
+    sound_id:
+      name: Sound ID
+      selector: {text: {}}
+    if_unavailable: &unavailable
+      name: If unavailable
+      default: skip
+      selector: {select: {options: [skip, error, connect]}}
+    if_busy: &busy
+      name: If busy
+      default: skip
+      selector: {select: {options: [skip, error, replace]}}
+    expires_in_ms: &expires
+      name: Start before
+      default: 5000
+      selector: {number: {min: 100, max: 30000, unit_of_measurement: ms, mode: box}}
+    cooldown_key: &cooldown_key
+      name: Cooldown group
+      description: Group repeated triggers such as front-door-alert.
+      selector: {text: {}}
+    cooldown_ms: &cooldown_ms
+      name: Cooldown
+      default: 0
+      selector: {number: {min: 0, max: 3600000, unit_of_measurement: ms, mode: box}}
+apply_lights:
+  name: Apply light preset
+  description: Apply a saved named light preset. Omit the preset ID to use the light preset select entity.
+  fields:
+    <<: *target_fields
+    preset_id:
+      name: Preset ID
+      selector: {text: {}}
+    if_unavailable: *unavailable
+    if_busy: *busy
+    expires_in_ms: *expires
+    cooldown_key: *cooldown_key
+    cooldown_ms: *cooldown_ms
+run_protocol:
+  name: Run protocol
+  description: Run an available non-motion protocol. Motion and unknown effects are rejected in this integration version.
+  fields:
+    <<: *target_fields
+    protocol_id:
+      name: Protocol ID
+      selector: {text: {}}
+    if_unavailable: *unavailable
+    if_busy: *busy
+    expires_in_ms: *expires
+    cooldown_key: *cooldown_key
+    cooldown_ms: *cooldown_ms
+list_catalog:
+  name: List catalog
+  description: Return readable catalog items and IDs without waking the droid. Requires a response variable.
+  fields:
+    droid_id: {name: Droid ID, required: true, selector: {text: {}}}
+    config_entry_id: {name: Controller service, selector: {config_entry: {integration: mech}}}
+    kind:
+      name: Catalog
+      required: true
+      selector: {select: {options: [sounds, light_presets, protocols]}}
+get_operation:
+  name: Get operation result
+  description: Read an operation without retrying it. Dispatched with an ACK is not confirmed physical completion.
+  fields:
+    droid_id: {name: Droid ID, required: true, selector: {text: {}}}
+    config_entry_id: {name: Controller service, selector: {config_entry: {integration: mech}}}
+    operation_id: {name: Operation ID, required: true, selector: {text: {}}}

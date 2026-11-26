@@ -1,0 +1,18 @@
+Google Material Symbols Outlined
+Copyright Google LLC
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+Source: https://github.com/google/material-design-icons/tree/master/symbols/web
+The included SVGs are unmodified official 24px Outlined symbols (weight 400).
+Their paths are embedded in app/components/materialSymbolPaths.ts for offline
+rendering with react-native-svg on web and Android; no remote font is loaded.
+
+Application name -> Google symbol:
+stop -> stop
+settings -> settings
+home -> home
+bluetooth -> bluetooth
+battery -> battery_full
+notes -> settings_input_antenna
+moon -> dark_mode
+sun -> light_mode
+power -> power_settings_new

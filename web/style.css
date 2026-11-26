@@ -1,0 +1,2 @@
+html,body,#root{height:100%;margin:0}body{font-family:system-ui,sans-serif;color:#E8F4FF;background:#070B14}*{box-sizing:border-box}button,input,textarea{font:inherit}:focus-visible{outline:3px solid #174ea6;outline-offset:3px}#root>div{height:100%}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html[data-r2-theme="dark"] body{color:#edf3fc;background:#0d1420}html[data-r2-theme="dark"] label{color:#edf3fc}

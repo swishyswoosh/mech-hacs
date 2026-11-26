@@ -1,0 +1,13 @@
+{
+  "id": "/",
+  "name": "R2-D2 Controller",
+  "short_name": "R2 Controller",
+  "description": "Local comlink and driving cockpit for your R2 droid.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#070B14",
+  "theme_color": "#070B14",
+  "icons": [{ "src": "/r2-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

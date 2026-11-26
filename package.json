@@ -1,0 +1,11 @@
+{
+  "name": "mech-home-assistant",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/build-hacs.py --layout hacs --output build/mech.zip",
+    "test": "python3 -m unittest discover -s test/packaging -v && node --test test/panel/*.test.mjs",
+    "check": "node scripts/export-hacs-protocol.ts --check && python3 scripts/check-hacs.py",
+    "sync:shared": "python3 scripts/sync-shared.py"
+  }
+}

@@ -1,0 +1,42 @@
+name: Validate
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.14'
+      - uses: astral-sh/setup-uv@v10.4.0
+      - run: npm --prefix web ci
+      - run: npm run check
+      - run: npm test
+      - run: uv run --frozen --project test/hacs python scripts/test-hacs.py -q test/hacs
+      - run: npm run build
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: mech-hacs-package
+          path: build/mech.zip
+          if-no-files-found: error
+  hassfest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: home-assistant/actions/hassfest@master
+  hacs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hacs/action@main
+        with:
+          category: integration

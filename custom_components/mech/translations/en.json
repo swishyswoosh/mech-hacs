@@ -1,0 +1,50 @@
+{
+  "title": "Mech Droid Controller",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Choose an R2-D2 from Home Assistant Bluetooth",
+        "description": "Select a cached device or enter its Bluetooth address. Home Assistant can use a local adapter or a compatible Bluetooth proxy. Setup does not connect or wake the droid; use Connect when ready. Choose the optional service setting only for an existing Mech API installation.",
+        "data": {
+          "address": "Bluetooth device or address",
+          "name": "Friendly name",
+          "use_service": "Use an existing Mech API service instead"
+        }
+      },
+      "droids": {
+        "title": "Choose enrolled droids",
+        "data": {
+          "droid_ids": "Droids"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Update API token",
+        "data": {
+          "token": "API token"
+        }
+      },
+      "service": {
+        "title": "Connect to the local controller service",
+        "description": "Enter the service address and API token. This does not connect to or wake a droid.",
+        "data": {
+          "url": "Service URL",
+          "token": "API token"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The token was rejected or lacks the required permissions.",
+      "cannot_connect": "Unable to reach the local controller service.",
+      "incompatible_api": "This integration requires Mech API v1.",
+      "invalid_url": "Enter an HTTP(S) service URL without embedded credentials, query or fragment.",
+      "no_droids": "Enroll a droid in the controller service first.",
+      "select_droid": "Choose at least one enrolled droid.",
+      "invalid_address": "Select a device or enter a Bluetooth address such as AA:BB:CC:DD:EE:FF."
+    },
+    "abort": {
+      "already_configured": "This droid or controller service is already configured.",
+      "wrong_service": "The service identity changed. Add the intended service separately.",
+      "reauth_successful": "The API token was updated."
+    }
+  }
+}

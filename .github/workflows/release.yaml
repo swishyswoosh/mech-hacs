@@ -1,0 +1,59 @@
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Require user-facing release notes
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: test -s "releases/${RELEASE_TAG#v}.md"
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.14'
+      - uses: astral-sh/setup-uv@v10.4.0
+      - run: npm --prefix web ci
+      - run: npm run check
+      - run: python3 scripts/check-hacs.py --tag "$RELEASE_TAG"
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+      - run: npm test
+      - run: uv run --frozen --project test/hacs python scripts/test-hacs.py -q test/hacs
+      - run: npm run build
+      - name: Package release notes
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: cp "releases/${RELEASE_TAG#v}.md" build/RELEASE_NOTES.md
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: release-package
+          path: |
+            build/mech.zip
+            build/RELEASE_NOTES.md
+          if-no-files-found: error
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          name: release-package
+          path: release
+      - name: Create draft release with the HACS asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: gh release create "$RELEASE_TAG" release/mech.zip --verify-tag --draft --notes-file release/RELEASE_NOTES.md

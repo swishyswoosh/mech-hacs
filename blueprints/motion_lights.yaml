@@ -1,0 +1,38 @@
+blueprint:
+  name: Droid lights when motion is detected
+  description: Apply a saved light preset on a fresh motion event. Does not drive or wake the droid.
+  domain: automation
+  input:
+    config_entry_id:
+      name: Controller service
+      selector: {config_entry: {integration: mech}}
+    motion:
+      name: Motion sensor
+      selector: {entity: {domain: binary_sensor, device_class: motion}}
+    droid_id:
+      name: Droid ID
+      selector: {text: {}}
+    preset_id:
+      name: Light preset ID
+      selector: {text: {}}
+    cooldown:
+      name: Cooldown
+      default: 60000
+      selector: {number: {min: 0, max: 3600000, unit_of_measurement: ms, mode: box}}
+triggers:
+  - trigger: state
+    entity_id: !input motion
+    from: "off"
+    to: "on"
+actions:
+  - action: mech.apply_lights
+    data:
+      config_entry_id: !input config_entry_id
+      droid_id: !input droid_id
+      preset_id: !input preset_id
+      if_unavailable: skip
+      if_busy: skip
+      expires_in_ms: 5000
+      cooldown_key: "{{ this.entity_id }}"
+      cooldown_ms: !input cooldown
+mode: single

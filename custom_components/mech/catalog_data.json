@@ -1,0 +1,4747 @@
+{
+  "schema_version": 1,
+  "session_defaults": {
+    "state": "disconnected",
+    "detail": "Disconnected.",
+    "packets": [],
+    "connection": {
+      "state": "disconnected",
+      "epoch": 0
+    },
+    "safety": {
+      "state": "disconnected",
+      "motionArmed": false,
+      "wheelsValidated": false,
+      "canControl": false
+    },
+    "activity": {
+      "source": null,
+      "label": "",
+      "sources": {
+        "automation": "",
+        "experience": ""
+      }
+    },
+    "telemetry": {
+      "packets": []
+    }
+  },
+  "catalogs": {
+    "sounds": {
+      "items": [
+        {
+          "id": "sound:23",
+          "name": "Fall",
+          "group": "Effects",
+          "firmware_id": 23,
+          "sector": 1609,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:24",
+          "name": "Hit 1",
+          "group": "Hit",
+          "firmware_id": 24,
+          "sector": 1623,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:25",
+          "name": "Hit 10",
+          "group": "Hit",
+          "firmware_id": 25,
+          "sector": 1628,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:26",
+          "name": "Hit 11",
+          "group": "Hit",
+          "firmware_id": 26,
+          "sector": 1635,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:27",
+          "name": "Hit 2",
+          "group": "Hit",
+          "firmware_id": 27,
+          "sector": 1642,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:28",
+          "name": "Hit 3",
+          "group": "Hit",
+          "firmware_id": 28,
+          "sector": 1647,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:29",
+          "name": "Hit 4",
+          "group": "Hit",
+          "firmware_id": 29,
+          "sector": 1653,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:30",
+          "name": "Hit 5",
+          "group": "Hit",
+          "firmware_id": 30,
+          "sector": 1659,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:31",
+          "name": "Hit 6",
+          "group": "Hit",
+          "firmware_id": 31,
+          "sector": 1664,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:32",
+          "name": "Hit 7",
+          "group": "Hit",
+          "firmware_id": 32,
+          "sector": 1669,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:33",
+          "name": "Hit 8",
+          "group": "Hit",
+          "firmware_id": 33,
+          "sector": 1676,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:34",
+          "name": "Hit 9",
+          "group": "Hit",
+          "firmware_id": 34,
+          "sector": 1684,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:35",
+          "name": "Step 1",
+          "group": "Step",
+          "firmware_id": 35,
+          "sector": 1690,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:36",
+          "name": "Step 2",
+          "group": "Step",
+          "firmware_id": 36,
+          "sector": 1693,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:37",
+          "name": "Step 3",
+          "group": "Step",
+          "firmware_id": 37,
+          "sector": 1696,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:38",
+          "name": "Step 4",
+          "group": "Step",
+          "firmware_id": 38,
+          "sector": 1698,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:39",
+          "name": "Step 5",
+          "group": "Step",
+          "firmware_id": 39,
+          "sector": 1700,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:40",
+          "name": "Step 6",
+          "group": "Step",
+          "firmware_id": 40,
+          "sector": 1702,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:41",
+          "name": "Access Panels",
+          "group": "Effects",
+          "firmware_id": 41,
+          "sector": 1704,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:42",
+          "name": "Alarm 1",
+          "group": "Alarm",
+          "firmware_id": 42,
+          "sector": 1737,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:43",
+          "name": "Alarm 10",
+          "group": "Alarm",
+          "firmware_id": 43,
+          "sector": 1747,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:44",
+          "name": "Alarm 12",
+          "group": "Alarm",
+          "firmware_id": 44,
+          "sector": 1756,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:45",
+          "name": "Alarm 13",
+          "group": "Alarm",
+          "firmware_id": 45,
+          "sector": 1763,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:46",
+          "name": "Alarm 14",
+          "group": "Alarm",
+          "firmware_id": 46,
+          "sector": 1771,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:47",
+          "name": "Alarm 15",
+          "group": "Alarm",
+          "firmware_id": 47,
+          "sector": 1784,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:48",
+          "name": "Alarm 16",
+          "group": "Alarm",
+          "firmware_id": 48,
+          "sector": 1791,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:49",
+          "name": "Alarm 2",
+          "group": "Alarm",
+          "firmware_id": 49,
+          "sector": 1809,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:50",
+          "name": "Alarm 3",
+          "group": "Alarm",
+          "firmware_id": 50,
+          "sector": 1821,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:51",
+          "name": "Alarm 4",
+          "group": "Alarm",
+          "firmware_id": 51,
+          "sector": 1831,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:52",
+          "name": "Alarm 5",
+          "group": "Alarm",
+          "firmware_id": 52,
+          "sector": 1835,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:53",
+          "name": "Alarm 6",
+          "group": "Alarm",
+          "firmware_id": 53,
+          "sector": 1843,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:54",
+          "name": "Alarm 7",
+          "group": "Alarm",
+          "firmware_id": 54,
+          "sector": 1858,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:55",
+          "name": "Alarm 8",
+          "group": "Alarm",
+          "firmware_id": 55,
+          "sector": 1867,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:56",
+          "name": "Alarm 9",
+          "group": "Alarm",
+          "firmware_id": 56,
+          "sector": 1893,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:57",
+          "name": "Annoyed",
+          "group": "Effects",
+          "firmware_id": 57,
+          "sector": 1910,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:58",
+          "name": "Burnout",
+          "group": "Effects",
+          "firmware_id": 58,
+          "sector": 1915,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:59",
+          "name": "Chatty 1",
+          "group": "Chatty",
+          "firmware_id": 59,
+          "sector": 1950,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:60",
+          "name": "Chatty 10",
+          "group": "Chatty",
+          "firmware_id": 60,
+          "sector": 1959,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:61",
+          "name": "Chatty 11",
+          "group": "Chatty",
+          "firmware_id": 61,
+          "sector": 1966,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:62",
+          "name": "Chatty 12",
+          "group": "Chatty",
+          "firmware_id": 62,
+          "sector": 1977,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:63",
+          "name": "Chatty 13",
+          "group": "Chatty",
+          "firmware_id": 63,
+          "sector": 1987,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:64",
+          "name": "Chatty 14",
+          "group": "Chatty",
+          "firmware_id": 64,
+          "sector": 2002,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:65",
+          "name": "Chatty 15",
+          "group": "Chatty",
+          "firmware_id": 65,
+          "sector": 2007,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:66",
+          "name": "Chatty 16",
+          "group": "Chatty",
+          "firmware_id": 66,
+          "sector": 2010,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:67",
+          "name": "Chatty 17",
+          "group": "Chatty",
+          "firmware_id": 67,
+          "sector": 2019,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:68",
+          "name": "Chatty 18",
+          "group": "Chatty",
+          "firmware_id": 68,
+          "sector": 2028,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:69",
+          "name": "Chatty 19",
+          "group": "Chatty",
+          "firmware_id": 69,
+          "sector": 2039,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:70",
+          "name": "Chatty 2",
+          "group": "Chatty",
+          "firmware_id": 70,
+          "sector": 2061,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:71",
+          "name": "Chatty 20",
+          "group": "Chatty",
+          "firmware_id": 71,
+          "sector": 2072,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:72",
+          "name": "Chatty 21",
+          "group": "Chatty",
+          "firmware_id": 72,
+          "sector": 2080,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:73",
+          "name": "Chatty 22",
+          "group": "Chatty",
+          "firmware_id": 73,
+          "sector": 2085,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:74",
+          "name": "Chatty 23",
+          "group": "Chatty",
+          "firmware_id": 74,
+          "sector": 2095,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:75",
+          "name": "Chatty 24",
+          "group": "Chatty",
+          "firmware_id": 75,
+          "sector": 2105,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:76",
+          "name": "Chatty 25",
+          "group": "Chatty",
+          "firmware_id": 76,
+          "sector": 2121,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:77",
+          "name": "Chatty 26",
+          "group": "Chatty",
+          "firmware_id": 77,
+          "sector": 2132,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:78",
+          "name": "Chatty 27",
+          "group": "Chatty",
+          "firmware_id": 78,
+          "sector": 2143,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:79",
+          "name": "Chatty 28",
+          "group": "Chatty",
+          "firmware_id": 79,
+          "sector": 2157,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:80",
+          "name": "Chatty 29",
+          "group": "Chatty",
+          "firmware_id": 80,
+          "sector": 2170,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:81",
+          "name": "Chatty 3",
+          "group": "Chatty",
+          "firmware_id": 81,
+          "sector": 2174,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:82",
+          "name": "Chatty 30",
+          "group": "Chatty",
+          "firmware_id": 82,
+          "sector": 2184,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:83",
+          "name": "Chatty 31",
+          "group": "Chatty",
+          "firmware_id": 83,
+          "sector": 2188,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:84",
+          "name": "Chatty 32",
+          "group": "Chatty",
+          "firmware_id": 84,
+          "sector": 2198,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:85",
+          "name": "Chatty 33",
+          "group": "Chatty",
+          "firmware_id": 85,
+          "sector": 2202,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:86",
+          "name": "Chatty 34",
+          "group": "Chatty",
+          "firmware_id": 86,
+          "sector": 2211,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:87",
+          "name": "Chatty 35",
+          "group": "Chatty",
+          "firmware_id": 87,
+          "sector": 2221,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:88",
+          "name": "Chatty 36",
+          "group": "Chatty",
+          "firmware_id": 88,
+          "sector": 2232,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:89",
+          "name": "Chatty 37",
+          "group": "Chatty",
+          "firmware_id": 89,
+          "sector": 2241,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:90",
+          "name": "Chatty 38",
+          "group": "Chatty",
+          "firmware_id": 90,
+          "sector": 2253,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:91",
+          "name": "Chatty 39",
+          "group": "Chatty",
+          "firmware_id": 91,
+          "sector": 2264,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:92",
+          "name": "Chatty 4",
+          "group": "Chatty",
+          "firmware_id": 92,
+          "sector": 2276,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:93",
+          "name": "Chatty 40",
+          "group": "Chatty",
+          "firmware_id": 93,
+          "sector": 2285,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:94",
+          "name": "Chatty 41",
+          "group": "Chatty",
+          "firmware_id": 94,
+          "sector": 2292,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:95",
+          "name": "Chatty 42",
+          "group": "Chatty",
+          "firmware_id": 95,
+          "sector": 2307,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:96",
+          "name": "Chatty 43",
+          "group": "Chatty",
+          "firmware_id": 96,
+          "sector": 2322,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:97",
+          "name": "Chatty 44",
+          "group": "Chatty",
+          "firmware_id": 97,
+          "sector": 2332,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:98",
+          "name": "Chatty 45",
+          "group": "Chatty",
+          "firmware_id": 98,
+          "sector": 2344,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:99",
+          "name": "Chatty 46",
+          "group": "Chatty",
+          "firmware_id": 99,
+          "sector": 2357,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:100",
+          "name": "Chatty 47",
+          "group": "Chatty",
+          "firmware_id": 100,
+          "sector": 2368,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:101",
+          "name": "Chatty 48",
+          "group": "Chatty",
+          "firmware_id": 101,
+          "sector": 2377,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:102",
+          "name": "Chatty 49",
+          "group": "Chatty",
+          "firmware_id": 102,
+          "sector": 2387,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:103",
+          "name": "Chatty 5",
+          "group": "Chatty",
+          "firmware_id": 103,
+          "sector": 2399,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:104",
+          "name": "Chatty 50",
+          "group": "Chatty",
+          "firmware_id": 104,
+          "sector": 2413,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:105",
+          "name": "Chatty 51",
+          "group": "Chatty",
+          "firmware_id": 105,
+          "sector": 2424,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:106",
+          "name": "Chatty 52",
+          "group": "Chatty",
+          "firmware_id": 106,
+          "sector": 2439,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:107",
+          "name": "Chatty 53",
+          "group": "Chatty",
+          "firmware_id": 107,
+          "sector": 2452,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:108",
+          "name": "Chatty 54",
+          "group": "Chatty",
+          "firmware_id": 108,
+          "sector": 2457,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:109",
+          "name": "Chatty 55",
+          "group": "Chatty",
+          "firmware_id": 109,
+          "sector": 2463,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:110",
+          "name": "Chatty 56",
+          "group": "Chatty",
+          "firmware_id": 110,
+          "sector": 2474,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:111",
+          "name": "Chatty 57",
+          "group": "Chatty",
+          "firmware_id": 111,
+          "sector": 2492,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:112",
+          "name": "Chatty 58",
+          "group": "Chatty",
+          "firmware_id": 112,
+          "sector": 2509,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:113",
+          "name": "Chatty 59",
+          "group": "Chatty",
+          "firmware_id": 113,
+          "sector": 2519,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:114",
+          "name": "Chatty 6",
+          "group": "Chatty",
+          "firmware_id": 114,
+          "sector": 2524,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:115",
+          "name": "Chatty 60",
+          "group": "Chatty",
+          "firmware_id": 115,
+          "sector": 2535,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:116",
+          "name": "Chatty 61",
+          "group": "Chatty",
+          "firmware_id": 116,
+          "sector": 2543,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:117",
+          "name": "Chatty 62",
+          "group": "Chatty",
+          "firmware_id": 117,
+          "sector": 2554,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:118",
+          "name": "Chatty 7",
+          "group": "Chatty",
+          "firmware_id": 118,
+          "sector": 2562,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:119",
+          "name": "Chatty 8",
+          "group": "Chatty",
+          "firmware_id": 119,
+          "sector": 2572,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:120",
+          "name": "Chatty 9",
+          "group": "Chatty",
+          "firmware_id": 120,
+          "sector": 2579,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:121",
+          "name": "Engage Hyperdrive",
+          "group": "Effects",
+          "firmware_id": 121,
+          "sector": 2586,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:122",
+          "name": "Excited 1",
+          "group": "Excited",
+          "firmware_id": 122,
+          "sector": 2600,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:123",
+          "name": "Excited 10",
+          "group": "Excited",
+          "firmware_id": 123,
+          "sector": 2615,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:124",
+          "name": "Excited 11",
+          "group": "Excited",
+          "firmware_id": 124,
+          "sector": 2633,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:125",
+          "name": "Excited 12",
+          "group": "Excited",
+          "firmware_id": 125,
+          "sector": 2644,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:126",
+          "name": "Excited 13",
+          "group": "Excited",
+          "firmware_id": 126,
+          "sector": 2654,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:127",
+          "name": "Excited 14",
+          "group": "Excited",
+          "firmware_id": 127,
+          "sector": 2662,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:128",
+          "name": "Excited 15",
+          "group": "Excited",
+          "firmware_id": 128,
+          "sector": 2680,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:129",
+          "name": "Excited 16",
+          "group": "Excited",
+          "firmware_id": 129,
+          "sector": 2691,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:130",
+          "name": "Excited 2",
+          "group": "Excited",
+          "firmware_id": 130,
+          "sector": 2708,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:131",
+          "name": "Excited 3",
+          "group": "Excited",
+          "firmware_id": 131,
+          "sector": 2726,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:132",
+          "name": "Excited 4",
+          "group": "Excited",
+          "firmware_id": 132,
+          "sector": 2730,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:133",
+          "name": "Excited 5",
+          "group": "Excited",
+          "firmware_id": 133,
+          "sector": 2736,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:134",
+          "name": "Excited 6",
+          "group": "Excited",
+          "firmware_id": 134,
+          "sector": 2753,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:135",
+          "name": "Excited 7",
+          "group": "Excited",
+          "firmware_id": 135,
+          "sector": 2767,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:136",
+          "name": "Excited 8",
+          "group": "Excited",
+          "firmware_id": 136,
+          "sector": 2777,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:137",
+          "name": "Excited 9",
+          "group": "Excited",
+          "firmware_id": 137,
+          "sector": 2787,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:138",
+          "name": "Head Spin",
+          "group": "Effects",
+          "firmware_id": 138,
+          "sector": 2797,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:139",
+          "name": "Hey 1",
+          "group": "Hey",
+          "firmware_id": 139,
+          "sector": 2813,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:140",
+          "name": "Hey 10",
+          "group": "Hey",
+          "firmware_id": 140,
+          "sector": 2824,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:141",
+          "name": "Hey 11",
+          "group": "Hey",
+          "firmware_id": 141,
+          "sector": 2828,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:142",
+          "name": "Hey 12",
+          "group": "Hey",
+          "firmware_id": 142,
+          "sector": 2833,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:143",
+          "name": "Hey 2",
+          "group": "Hey",
+          "firmware_id": 143,
+          "sector": 2841,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:144",
+          "name": "Hey 3",
+          "group": "Hey",
+          "firmware_id": 144,
+          "sector": 2856,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:145",
+          "name": "Hey 4",
+          "group": "Hey",
+          "firmware_id": 145,
+          "sector": 2861,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:146",
+          "name": "Hey 5",
+          "group": "Hey",
+          "firmware_id": 146,
+          "sector": 2882,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:147",
+          "name": "Hey 6",
+          "group": "Hey",
+          "firmware_id": 147,
+          "sector": 2893,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:148",
+          "name": "Hey 7",
+          "group": "Hey",
+          "firmware_id": 148,
+          "sector": 2898,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:149",
+          "name": "Hey 8",
+          "group": "Hey",
+          "firmware_id": 149,
+          "sector": 2904,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:150",
+          "name": "Hey 9",
+          "group": "Hey",
+          "firmware_id": 150,
+          "sector": 2912,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:151",
+          "name": "Laugh 1",
+          "group": "Laugh",
+          "firmware_id": 151,
+          "sector": 2919,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:152",
+          "name": "Laugh 2",
+          "group": "Laugh",
+          "firmware_id": 152,
+          "sector": 2935,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:153",
+          "name": "Laugh 3",
+          "group": "Laugh",
+          "firmware_id": 153,
+          "sector": 2950,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:154",
+          "name": "Laugh 4",
+          "group": "Laugh",
+          "firmware_id": 154,
+          "sector": 2955,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:155",
+          "name": "Motor",
+          "group": "Effects",
+          "firmware_id": 155,
+          "sector": 2970,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:156",
+          "name": "Negative 1",
+          "group": "Negative",
+          "firmware_id": 156,
+          "sector": 3101,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:157",
+          "name": "Negative 10",
+          "group": "Negative",
+          "firmware_id": 157,
+          "sector": 3111,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:158",
+          "name": "Negative 11",
+          "group": "Negative",
+          "firmware_id": 158,
+          "sector": 3115,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:159",
+          "name": "Negative 12",
+          "group": "Negative",
+          "firmware_id": 159,
+          "sector": 3121,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:160",
+          "name": "Negative 13",
+          "group": "Negative",
+          "firmware_id": 160,
+          "sector": 3132,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:161",
+          "name": "Negative 14",
+          "group": "Negative",
+          "firmware_id": 161,
+          "sector": 3136,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:162",
+          "name": "Negative 15",
+          "group": "Negative",
+          "firmware_id": 162,
+          "sector": 3148,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:163",
+          "name": "Negative 16",
+          "group": "Negative",
+          "firmware_id": 163,
+          "sector": 3152,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:164",
+          "name": "Negative 17",
+          "group": "Negative",
+          "firmware_id": 164,
+          "sector": 3157,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:165",
+          "name": "Negative 18",
+          "group": "Negative",
+          "firmware_id": 165,
+          "sector": 3164,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:166",
+          "name": "Negative 19",
+          "group": "Negative",
+          "firmware_id": 166,
+          "sector": 3167,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:167",
+          "name": "Negative 2",
+          "group": "Negative",
+          "firmware_id": 167,
+          "sector": 3172,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:168",
+          "name": "Negative 20",
+          "group": "Negative",
+          "firmware_id": 168,
+          "sector": 3178,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:169",
+          "name": "Negative 21",
+          "group": "Negative",
+          "firmware_id": 169,
+          "sector": 3191,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:170",
+          "name": "Negative 22",
+          "group": "Negative",
+          "firmware_id": 170,
+          "sector": 3200,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:171",
+          "name": "Negative 23",
+          "group": "Negative",
+          "firmware_id": 171,
+          "sector": 3213,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:172",
+          "name": "Negative 24",
+          "group": "Negative",
+          "firmware_id": 172,
+          "sector": 3219,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:173",
+          "name": "Negative 25",
+          "group": "Negative",
+          "firmware_id": 173,
+          "sector": 3226,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:174",
+          "name": "Negative 26",
+          "group": "Negative",
+          "firmware_id": 174,
+          "sector": 3230,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:175",
+          "name": "Negative 27",
+          "group": "Negative",
+          "firmware_id": 175,
+          "sector": 3233,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:176",
+          "name": "Negative 28",
+          "group": "Negative",
+          "firmware_id": 176,
+          "sector": 3241,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:177",
+          "name": "Negative 3",
+          "group": "Negative",
+          "firmware_id": 177,
+          "sector": 3251,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:178",
+          "name": "Negative 4",
+          "group": "Negative",
+          "firmware_id": 178,
+          "sector": 3258,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:179",
+          "name": "Negative 5",
+          "group": "Negative",
+          "firmware_id": 179,
+          "sector": 3263,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:180",
+          "name": "Negative 6",
+          "group": "Negative",
+          "firmware_id": 180,
+          "sector": 3268,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:181",
+          "name": "Negative 7",
+          "group": "Negative",
+          "firmware_id": 181,
+          "sector": 3274,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:182",
+          "name": "Negative 8",
+          "group": "Negative",
+          "firmware_id": 182,
+          "sector": 3282,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:183",
+          "name": "Negative 9",
+          "group": "Negative",
+          "firmware_id": 183,
+          "sector": 3291,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:184",
+          "name": "Positive 1",
+          "group": "Positive",
+          "firmware_id": 184,
+          "sector": 3302,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:185",
+          "name": "Positive 10",
+          "group": "Positive",
+          "firmware_id": 185,
+          "sector": 3309,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:186",
+          "name": "Positive 11",
+          "group": "Positive",
+          "firmware_id": 186,
+          "sector": 3318,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:187",
+          "name": "Positive 12",
+          "group": "Positive",
+          "firmware_id": 187,
+          "sector": 3326,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:188",
+          "name": "Positive 13",
+          "group": "Positive",
+          "firmware_id": 188,
+          "sector": 3340,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:189",
+          "name": "Positive 14",
+          "group": "Positive",
+          "firmware_id": 189,
+          "sector": 3353,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:190",
+          "name": "Positive 15",
+          "group": "Positive",
+          "firmware_id": 190,
+          "sector": 3358,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:191",
+          "name": "Positive 16",
+          "group": "Positive",
+          "firmware_id": 191,
+          "sector": 3364,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:192",
+          "name": "Positive 17",
+          "group": "Positive",
+          "firmware_id": 192,
+          "sector": 3369,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:193",
+          "name": "Positive 18",
+          "group": "Positive",
+          "firmware_id": 193,
+          "sector": 3375,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:194",
+          "name": "Positive 19",
+          "group": "Positive",
+          "firmware_id": 194,
+          "sector": 3388,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:195",
+          "name": "Positive 2",
+          "group": "Positive",
+          "firmware_id": 195,
+          "sector": 3394,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:196",
+          "name": "Positive 20",
+          "group": "Positive",
+          "firmware_id": 196,
+          "sector": 3403,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:197",
+          "name": "Positive 21",
+          "group": "Positive",
+          "firmware_id": 197,
+          "sector": 3410,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:198",
+          "name": "Positive 22",
+          "group": "Positive",
+          "firmware_id": 198,
+          "sector": 3422,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:199",
+          "name": "Positive 23",
+          "group": "Positive",
+          "firmware_id": 199,
+          "sector": 3434,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:200",
+          "name": "Positive 3",
+          "group": "Positive",
+          "firmware_id": 200,
+          "sector": 3439,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:201",
+          "name": "Positive 4",
+          "group": "Positive",
+          "firmware_id": 201,
+          "sector": 3446,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:202",
+          "name": "Positive 5",
+          "group": "Positive",
+          "firmware_id": 202,
+          "sector": 3449,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:203",
+          "name": "Positive 6",
+          "group": "Positive",
+          "firmware_id": 203,
+          "sector": 3454,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:204",
+          "name": "Positive 7",
+          "group": "Positive",
+          "firmware_id": 204,
+          "sector": 3460,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:205",
+          "name": "Positive 8",
+          "group": "Positive",
+          "firmware_id": 205,
+          "sector": 3471,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:206",
+          "name": "Positive 9",
+          "group": "Positive",
+          "firmware_id": 206,
+          "sector": 3478,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:207",
+          "name": "Sad 1",
+          "group": "Sad",
+          "firmware_id": 207,
+          "sector": 3484,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:208",
+          "name": "Sad 10",
+          "group": "Sad",
+          "firmware_id": 208,
+          "sector": 3495,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:209",
+          "name": "Sad 11",
+          "group": "Sad",
+          "firmware_id": 209,
+          "sector": 3518,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:210",
+          "name": "Sad 12",
+          "group": "Sad",
+          "firmware_id": 210,
+          "sector": 3526,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:211",
+          "name": "Sad 13",
+          "group": "Sad",
+          "firmware_id": 211,
+          "sector": 3536,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:212",
+          "name": "Sad 14",
+          "group": "Sad",
+          "firmware_id": 212,
+          "sector": 3543,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:213",
+          "name": "Sad 15",
+          "group": "Sad",
+          "firmware_id": 213,
+          "sector": 3553,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:214",
+          "name": "Sad 16",
+          "group": "Sad",
+          "firmware_id": 214,
+          "sector": 3561,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:215",
+          "name": "Sad 17",
+          "group": "Sad",
+          "firmware_id": 215,
+          "sector": 3570,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:216",
+          "name": "Sad 18",
+          "group": "Sad",
+          "firmware_id": 216,
+          "sector": 3593,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:217",
+          "name": "Sad 19",
+          "group": "Sad",
+          "firmware_id": 217,
+          "sector": 3600,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:218",
+          "name": "Sad 2",
+          "group": "Sad",
+          "firmware_id": 218,
+          "sector": 3608,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:219",
+          "name": "Sad 20",
+          "group": "Sad",
+          "firmware_id": 219,
+          "sector": 3612,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:220",
+          "name": "Sad 21",
+          "group": "Sad",
+          "firmware_id": 220,
+          "sector": 3619,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:221",
+          "name": "Sad 22",
+          "group": "Sad",
+          "firmware_id": 221,
+          "sector": 3632,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:222",
+          "name": "Sad 23",
+          "group": "Sad",
+          "firmware_id": 222,
+          "sector": 3639,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:223",
+          "name": "Sad 24",
+          "group": "Sad",
+          "firmware_id": 223,
+          "sector": 3649,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:224",
+          "name": "Sad 25",
+          "group": "Sad",
+          "firmware_id": 224,
+          "sector": 3661,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:225",
+          "name": "Sad 3",
+          "group": "Sad",
+          "firmware_id": 225,
+          "sector": 3686,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:226",
+          "name": "Sad 4",
+          "group": "Sad",
+          "firmware_id": 226,
+          "sector": 3693,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:227",
+          "name": "Sad 5",
+          "group": "Sad",
+          "firmware_id": 227,
+          "sector": 3703,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:228",
+          "name": "Sad 6",
+          "group": "Sad",
+          "firmware_id": 228,
+          "sector": 3739,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:229",
+          "name": "Sad 7",
+          "group": "Sad",
+          "firmware_id": 229,
+          "sector": 3755,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:230",
+          "name": "Sad 8",
+          "group": "Sad",
+          "firmware_id": 230,
+          "sector": 3782,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:231",
+          "name": "Sad 9",
+          "group": "Sad",
+          "firmware_id": 231,
+          "sector": 3790,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:232",
+          "name": "Scream",
+          "group": "Scream",
+          "firmware_id": 232,
+          "sector": 3797,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:233",
+          "name": "Scream 2",
+          "group": "Scream",
+          "firmware_id": 233,
+          "sector": 3810,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "sound:234",
+          "name": "Shortout",
+          "group": "Effects",
+          "firmware_id": 234,
+          "sector": 3825,
+          "available": true,
+          "effects": [
+            "audio"
+          ],
+          "required_resources": [
+            "audio"
+          ],
+          "completion": "ack"
+        }
+      ]
+    },
+    "animations": {
+      "items": [
+        {
+          "id": "animation:0",
+          "name": "Charger1",
+          "group": "Charger",
+          "firmware_id": 0,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:1",
+          "name": "Charger2",
+          "group": "Charger",
+          "firmware_id": 1,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:2",
+          "name": "Charger3",
+          "group": "Charger",
+          "firmware_id": 2,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:3",
+          "name": "Charger4",
+          "group": "Charger",
+          "firmware_id": 3,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:4",
+          "name": "Charger5",
+          "group": "Charger",
+          "firmware_id": 4,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:5",
+          "name": "Charger6",
+          "group": "Charger",
+          "firmware_id": 5,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:6",
+          "name": "Charger7",
+          "group": "Charger",
+          "firmware_id": 6,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:7",
+          "name": "Emote Alarm",
+          "group": "Emote",
+          "firmware_id": 7,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:8",
+          "name": "Emote Angry",
+          "group": "Emote",
+          "firmware_id": 8,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:9",
+          "name": "Emote Annoyed",
+          "group": "Emote",
+          "firmware_id": 9,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:10",
+          "name": "Emote Chatty",
+          "group": "Emote",
+          "firmware_id": 10,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:11",
+          "name": "Emote Drive",
+          "group": "Emote",
+          "firmware_id": 11,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:12",
+          "name": "Emote Excited",
+          "group": "Emote",
+          "firmware_id": 12,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:13",
+          "name": "Emote Happy",
+          "group": "Emote",
+          "firmware_id": 13,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:14",
+          "name": "Emote IonBlast",
+          "group": "Emote",
+          "firmware_id": 14,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:15",
+          "name": "Emote Laugh",
+          "group": "Emote",
+          "firmware_id": 15,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:16",
+          "name": "Emote No",
+          "group": "Emote",
+          "firmware_id": 16,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:17",
+          "name": "Emote Sad",
+          "group": "Emote",
+          "firmware_id": 17,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:18",
+          "name": "Emote Sassy",
+          "group": "Emote",
+          "firmware_id": 18,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:19",
+          "name": "Emote Scared",
+          "group": "Emote",
+          "firmware_id": 19,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:20",
+          "name": "Emote Spin",
+          "group": "Emote",
+          "firmware_id": 20,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:21",
+          "name": "Emote Yes",
+          "group": "Emote",
+          "firmware_id": 21,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:22",
+          "name": "Emote Scan",
+          "group": "Emote",
+          "firmware_id": 22,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:23",
+          "name": "Emote Sleep",
+          "group": "Emote",
+          "firmware_id": 23,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:24",
+          "name": "Emote Surprised",
+          "group": "Emote",
+          "firmware_id": 24,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:25",
+          "name": "Idle1",
+          "group": "Idle",
+          "firmware_id": 25,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:26",
+          "name": "Idle2",
+          "group": "Idle",
+          "firmware_id": 26,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:27",
+          "name": "Idle3",
+          "group": "Idle",
+          "firmware_id": 27,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:28",
+          "name": "Patrol Alarm",
+          "group": "Patrol",
+          "firmware_id": 28,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:29",
+          "name": "Patrol Hit",
+          "group": "Patrol",
+          "firmware_id": 29,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:30",
+          "name": "Patol Patroling",
+          "group": "Patrol",
+          "firmware_id": 30,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:31",
+          "name": "WWM Angry",
+          "group": "Movie",
+          "firmware_id": 31,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:32",
+          "name": "WWM Anxious",
+          "group": "Movie",
+          "firmware_id": 32,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:33",
+          "name": "WWM Bow",
+          "group": "Movie",
+          "firmware_id": 33,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:34",
+          "name": "WWM Concern",
+          "group": "Movie",
+          "firmware_id": 34,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:35",
+          "name": "WWM Curious",
+          "group": "Movie",
+          "firmware_id": 35,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:36",
+          "name": "WWM DoubleTake",
+          "group": "Movie",
+          "firmware_id": 36,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:37",
+          "name": "WWM Excited",
+          "group": "Movie",
+          "firmware_id": 37,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:38",
+          "name": "WWM Fiery",
+          "group": "Movie",
+          "firmware_id": 38,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:39",
+          "name": "WWM Frustrated",
+          "group": "Movie",
+          "firmware_id": 39,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:40",
+          "name": "WWM Happy",
+          "group": "Movie",
+          "firmware_id": 40,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:41",
+          "name": "WWM Jittery",
+          "group": "Movie",
+          "firmware_id": 41,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:42",
+          "name": "WWM Laugh",
+          "group": "Movie",
+          "firmware_id": 42,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:43",
+          "name": "WWM LongShake",
+          "group": "Movie",
+          "firmware_id": 43,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:44",
+          "name": "WWM No",
+          "group": "Movie",
+          "firmware_id": 44,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:45",
+          "name": "WWM Ominous",
+          "group": "Movie",
+          "firmware_id": 45,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:46",
+          "name": "WWM Relieved",
+          "group": "Movie",
+          "firmware_id": 46,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:47",
+          "name": "WWM Sad",
+          "group": "Movie",
+          "firmware_id": 47,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:48",
+          "name": "WWM Scared",
+          "group": "Movie",
+          "firmware_id": 48,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:49",
+          "name": "WWM Shake",
+          "group": "Movie",
+          "firmware_id": 49,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:50",
+          "name": "WWM Surprised",
+          "group": "Movie",
+          "firmware_id": 50,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:51",
+          "name": "WWM Taunting",
+          "group": "Movie",
+          "firmware_id": 51,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:52",
+          "name": "WWM Whisper",
+          "group": "Movie",
+          "firmware_id": 52,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:53",
+          "name": "WWM Yelling",
+          "group": "Movie",
+          "firmware_id": 53,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:54",
+          "name": "WWM Yoohoo",
+          "group": "Movie",
+          "firmware_id": 54,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        },
+        {
+          "id": "animation:55",
+          "name": "Additional motor sound",
+          "group": "Additional",
+          "firmware_id": 55,
+          "available": false,
+          "effects": [
+            "audio",
+            "lights",
+            "motion"
+          ],
+          "required_resources": [
+            "audio",
+            "lights",
+            "drive",
+            "dome",
+            "stance",
+            "behavior"
+          ],
+          "completion": "ack",
+          "reason": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable."
+        }
+      ]
+    },
+    "light_presets": {
+      "items": [
+        {
+          "id": "preset-idle",
+          "name": "Idle",
+          "available": true,
+          "effects": [
+            "lights"
+          ],
+          "required_resources": [
+            "lights"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "preset-alert",
+          "name": "Alert",
+          "available": true,
+          "effects": [
+            "lights"
+          ],
+          "required_resources": [
+            "lights"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "preset-party",
+          "name": "Party",
+          "available": true,
+          "effects": [
+            "lights"
+          ],
+          "required_resources": [
+            "lights"
+          ],
+          "completion": "ack"
+        },
+        {
+          "id": "preset-off",
+          "name": "Off",
+          "available": true,
+          "effects": [
+            "lights"
+          ],
+          "required_resources": [
+            "lights"
+          ],
+          "completion": "ack"
+        }
+      ]
+    },
+    "protocols": {
+      "items": [
+        {
+          "id": "protocol-device-lights",
+          "name": "Blue fade",
+          "available": true,
+          "effects": [
+            "lights"
+          ],
+          "required_resources": [
+            "lights"
+          ],
+          "completion": "ack",
+          "duration_ms": 2000,
+          "reason": "Requires Nordic 7.0.101; verified before execution. Schedule duration and cleanup ACK do not prove physical completion."
+        }
+      ]
+    },
+    "paths": {
+      "items": []
+    }
+  },
+  "light_channels": [
+    "front_dome_red",
+    "front_dome_green",
+    "front_dome_blue",
+    "rear_dome_red",
+    "rear_dome_green",
+    "rear_dome_blue",
+    "readouts",
+    "projector"
+  ],
+  "motion_unavailable": "Remote transport motion safety has not been validated. Motion and unknown or mixed effects are unavailable.",
+  "presets": {
+    "preset-idle": {
+      "did": 26,
+      "cid": 14,
+      "data": [
+        0,
+        255,
+        0,
+        40,
+        140,
+        100,
+        20,
+        80,
+        0,
+        100
+      ]
+    },
+    "preset-alert": {
+      "did": 26,
+      "cid": 14,
+      "data": [
+        0,
+        255,
+        255,
+        0,
+        0,
+        200,
+        255,
+        0,
+        0,
+        255
+      ]
+    },
+    "preset-party": {
+      "did": 26,
+      "cid": 14,
+      "data": [
+        0,
+        255,
+        150,
+        0,
+        255,
+        255,
+        0,
+        220,
+        100,
+        220
+      ]
+    },
+    "preset-off": {
+      "did": 26,
+      "cid": 14,
+      "data": [
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "recipe": {
+    "version": 1,
+    "name": "Blue fade",
+    "frames": [
+      {
+        "atMs": 0,
+        "controls": [
+          0,
+          0,
+          255,
+          0,
+          0,
+          255,
+          0,
+          0
+        ],
+        "transitionMs": 500
+      },
+      {
+        "atMs": 1500,
+        "controls": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "transitionMs": 500
+      }
+    ]
+  },
+  "recipe_command": {
+    "did": 23,
+    "cid": 26,
+    "data": [
+      0,
+      0,
+      255,
+      0,
+      0,
+      15,
+      0,
+      0,
+      255,
+      0,
+      0,
+      255,
+      0,
+      0,
+      1,
+      244,
+      255,
+      5,
+      220,
+      15,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      244,
+      254
+    ]
+  },
+  "recipe_duration_ms": 2000,
+  "stop_plan": [
+    {
+      "did": 23,
+      "cid": 43,
+      "data": []
+    },
+    {
+      "did": 23,
+      "cid": 41,
+      "data": [
+        0
+      ]
+    },
+    {
+      "did": 23,
+      "cid": 10,
+      "data": [
+        0
+      ]
+    },
+    {
+      "did": 23,
+      "cid": 47,
+      "data": [
+        0
+      ]
+    },
+    {
+      "did": 23,
+      "cid": 45,
+      "data": [
+        0
+      ]
+    },
+    {
+      "did": 23,
+      "cid": 13,
+      "data": [
+        0
+      ]
+    },
+    {
+      "did": 22,
+      "cid": 7,
+      "data": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "did": 26,
+      "cid": 10,
+      "data": []
+    }
+  ],
+  "cancel_lights": {
+    "did": 23,
+    "cid": 26,
+    "data": [
+      0,
+      0,
+      255,
+      0,
+      0,
+      254
+    ]
+  },
+  "release_lights": {
+    "did": 23,
+    "cid": 40,
+    "data": []
+  }
+}

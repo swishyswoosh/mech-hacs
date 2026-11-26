@@ -1,0 +1,39 @@
+blueprint:
+  name: Droid sound when a door opens
+  description: Play a selected catalog sound once when a door opens. Does not wake an unavailable droid.
+  domain: automation
+  input:
+    config_entry_id:
+      name: Controller service
+      selector: {config_entry: {integration: mech}}
+    door:
+      name: Door sensor
+      selector: {entity: {domain: binary_sensor, device_class: door}}
+    droid_id:
+      name: Droid ID
+      selector: {text: {}}
+    sound_id:
+      name: Sound ID
+      description: Use mech.list_catalog or the sound select entity to find the stable catalog ID.
+      selector: {text: {}}
+    cooldown:
+      name: Cooldown
+      default: 30000
+      selector: {number: {min: 0, max: 3600000, unit_of_measurement: ms, mode: box}}
+triggers:
+  - trigger: state
+    entity_id: !input door
+    from: "off"
+    to: "on"
+actions:
+  - action: mech.play_sound
+    data:
+      config_entry_id: !input config_entry_id
+      droid_id: !input droid_id
+      sound_id: !input sound_id
+      if_unavailable: skip
+      if_busy: skip
+      expires_in_ms: 5000
+      cooldown_key: "{{ this.entity_id }}"
+      cooldown_ms: !input cooldown
+mode: single

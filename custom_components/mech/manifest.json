@@ -1,0 +1,23 @@
+{
+  "domain": "mech",
+  "name": "Mech Droid Controller",
+  "categories": [
+    "media_entertainment"
+  ],
+  "codeowners": [
+    "@swishyswoosh"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "bluetooth",
+    "http",
+    "panel_custom",
+    "websocket_api"
+  ],
+  "documentation": "https://github.com/swishyswoosh/mech-hacs",
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/swishyswoosh/mech-hacs/issues",
+  "requirements": [],
+  "version": "0.1.3"
+}
