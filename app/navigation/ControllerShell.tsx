@@ -4,6 +4,7 @@ import { installHomeBack } from "./BrowserBack.ts";
 import { emptyFigure, figureState } from "../components/FigureState.ts";
 
 import { HubSheet } from "./HubSheet.tsx";
+import { shouldShowComlinkMessage } from "./comlink.ts";
 import { HudHeader, titles } from "./HudHeader.tsx";
 import React, {
   useEffect,
@@ -142,7 +143,7 @@ function Shell({
   const navigationPending = useRef(false);
   const [navigationVersion, setNavigationVersion] = useState(0);
   const notify = (text: string) => {
-    if (!text) return;
+    if (!shouldShowComlinkMessage(text, session.store.getSnapshot().safety.state === "failed")) return;
     setNotes((old) => (old[0] === text ? old : [text, ...old].slice(0, 50)));
     setToast(text);
     if (

@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Choose an R2-D2 from Home Assistant Bluetooth",
-        "description": "Select a cached device or enter its Bluetooth address. Home Assistant can use a local adapter or a compatible Bluetooth proxy. Setup does not connect or wake the droid; use Connect when ready. Choose the optional service setting only for an existing Mech API installation.",
+        "description": "Select a cached device or enter its Bluetooth address. Mech uses Home Assistant's existing Bluetooth connection. Setup does not connect or wake the droid; use Connect when ready. Choose the optional service setting only for an existing Mech API installation.",
         "data": {
           "address": "Bluetooth device or address",
           "name": "Friendly name",

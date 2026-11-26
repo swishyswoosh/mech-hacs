@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "repository": "mech",
-  "commit": "ea999ca44ec937c7fe697915f747d970807d9a4f",
+  "commit": "f9929ce225248d065580c3abd4f82c14fad5d194",
   "files": {
     "THIRD_PARTY_NOTICES.md": "d490af5aa64432e31d2e83e3147157c4aaf5bf4fea1e29a852839817708b380c",
     "app/App.tsx": "2399760a5a4249464348767d677d4f9e194694ad9ebfc71328a329ec4cdd3747",
@@ -70,11 +70,12 @@
     "app/library/rainbow.ts": "b67bff0383529e7ca8ee0563f4939c36d933b13e8c82c10a6eaf986008e35436",
     "app/library/settings.ts": "7426bff5d936e3f80d68dc1b18c96167620a57ae56de9249b2f8cceba2e2c6b2",
     "app/navigation/BrowserBack.ts": "10fdedba145c282fa7f0755c30f7b22bca061abaa8e3abb1d41ef3ecabd97cec",
-    "app/navigation/ControllerShell.tsx": "f1766fd17de8b0adbc72a48b76d95ecd7d656ad5f9b860b73abbc90bd16a2cf0",
+    "app/navigation/ControllerShell.tsx": "d48ab64446ca14dfc60f5c68fbc60f9e802581ceeda1a183642723538c33fdb4",
     "app/navigation/HubSheet.tsx": "98b10b7b59187ecd6e8d9a6b599b0b609685fe0b92f158510e7b5ccbf8dcedbd",
     "app/navigation/HudHeader.tsx": "e56bd207ff160c891832a0eb14f4367184fbbb0095bad784e769eec4053af7d0",
     "app/navigation/Navigator.ts": "f45c63f822b7530a95810ebb0aeea3aad907ccb2993da8a0feacc730bc4cb289",
     "app/navigation/PauseGate.ts": "737d7826c35207eea2a14e06d76ceea48a373e80c48ed9e205bb8d21d1a35708",
+    "app/navigation/comlink.ts": "8a69fe6e5556ef55ce18c5deae0bbae3e65df0ce74f67d146e19732e3b2fc980",
     "app/navigation/legacyNavigation.ts": "d357eae8eb0cc7606090b218d866d52c79600cc351f547fbdc9a2a76a8b33464",
     "app/navigation/prepareTaskSwitch.ts": "012c26ad9de36193a84d37362108fdcfed984031e49b7bfd7e2fba88492fc283",
     "app/navigation/serviceNavigation.ts": "03427d441a062b37501b0888f32be14aa796af02d3007aa981c86cbcd848a4d0",
