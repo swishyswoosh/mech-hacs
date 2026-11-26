@@ -1,5 +1,6 @@
-# Third-party notices
+# Artwork and third-party notices
 
+- Launcher icon and R2-D2 line art: MIT. See `licenses/artwork-MIT.txt` for provenance and license terms.
 - Material Symbols icon paths: Google, Apache License 2.0. See `licenses/material-symbols-LICENSE.txt` and https://github.com/google/material-design-icons.
 - Inter, Rajdhani and JetBrains Mono fonts: SIL Open Font License 1.1. The original notices are retained beside the font files in `app/theme/fonts/`.
 - React, React Native, React Native Web and React Native SVG: MIT. License texts for React, React Native and React Native SVG are included in `licenses/android/`.

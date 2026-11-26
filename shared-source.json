@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "repository": "mech",
-  "commit": "26e5194bb78df91bf7228f1c5cea6756ed3393fa",
+  "commit": "392e4698f8cce3bb52c23786aa66a6536276ea9b",
   "files": {
-    "THIRD_PARTY_NOTICES.md": "81ac5b0a1defa7facfe1eab0d8eef083155b5ae3bd8b7609f6e86ecf88aed8e8",
+    "THIRD_PARTY_NOTICES.md": "69b88f28c71032e49dfc1f83f137b576e9f9df699682bf7e6ce3637be7cb8be3",
     "app/App.tsx": "2399760a5a4249464348767d677d4f9e194694ad9ebfc71328a329ec4cdd3747",
     "app/assets/material-symbols/LICENSE": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
     "app/assets/material-symbols/NOTICE": "f54eec93e2c210b5fe58d3c0a13065700e6bc526910cbc9918e1977486c609ef",
@@ -218,6 +218,7 @@
     "licenses/android/react-native-LICENSE.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
     "licenses/android/react-native-svg-LICENSE.txt": "1bc2aa7dad15097cd71308d9ae013ff14d11a84357b170c1554f4035fb8a3acb",
     "licenses/android/yoga-LICENSE.txt": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+    "licenses/artwork-MIT.txt": "7a7bd2549956a942b7f879a4f499b5898f06927fbd48692f68648a80ab1b4245",
     "licenses/material-symbols-LICENSE.txt": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
     "service/catalogs.ts": "1eec6d1a1b84cec036ae0c45ad1c647a6d951e6de05c8db1cf4f41e91f22cce9",
     "web/RemoteApp.tsx": "969677f537d975f56c8a2adadb9a4c0bfc44f10f5a94e8a1af22c47a4045b470",
