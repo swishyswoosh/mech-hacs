@@ -14,6 +14,7 @@ FIELDS = ('attitude.pitch', 'attitude.roll', 'attitude.yaw',
           'accelerometer.x', 'accelerometer.y', 'accelerometer.z',
           'rawGyroscope.x', 'rawGyroscope.y', 'rawGyroscope.z', 'processorTemperature')
 MASK = 0x7FC01
+INTERVAL_MS = 2000
 QUERIES = ((24, 9, 5), (24, 8, 10), (23, 20, 5), (23, 22, 5), (19, 3, 60), (17, 14, 60))
 
 
@@ -58,7 +59,7 @@ class CockpitTelemetry:
         self._unsupported = set()
         self._readings = {}
         self._sensors = dict(status='not streaming', values={}, invalid=0,
-                             intervalMs=1000, schemaEpoch=0)
+                             intervalMs=INTERVAL_MS, schemaEpoch=0)
 
     def snapshot(self):
         return dict(sensors={**self._sensors, 'values': dict(self._sensors['values'])},
@@ -95,7 +96,7 @@ class CockpitTelemetry:
             self._index = 0
             self._readings = {}
             self._sensors = dict(status='stale · disconnected', values={}, invalid=0,
-                                 intervalMs=1000, schemaEpoch=self._sensors['schemaEpoch'])
+                                 intervalMs=INTERVAL_MS, schemaEpoch=self._sensors['schemaEpoch'])
             self._status = None
             self._busy = False
 
@@ -107,7 +108,7 @@ class CockpitTelemetry:
             except asyncio.CancelledError:
                 if asyncio.current_task().cancelling():
                     raise
-            await asyncio.sleep(1)
+            await asyncio.sleep(INTERVAL_MS / 1000)
 
     def _idle(self):
         s = self.session
@@ -204,14 +205,14 @@ class CockpitTelemetry:
         extended = await execute((24, 13, b''))
         if _reply(extended, 24, 13, 4) != b'\x00' * 4:
             raise ValueError('Extended sensor mask readback mismatch')
-        await execute((24, 0, struct.pack('>HBI', 1000, 0, MASK)))
+        await execute((24, 0, struct.pack('>HBI', INTERVAL_MS, 0, MASK)))
         active = await execute((24, 1, b''))
-        if struct.unpack('>HBI', _reply(active, 24, 1, 7)) != (1000, 0, MASK):
+        if struct.unpack('>HBI', _reply(active, 24, 1, 7)) != (INTERVAL_MS, 0, MASK):
             raise ValueError('Active sensor mask/interval readback mismatch')
         self._verified = self._attempted = True
         self._status = None
         self._sensors = dict(status='streaming · awaiting sample', values={}, invalid=0,
-                             intervalMs=1000, requestedIntervalMs=1000, adapted=False,
+                             intervalMs=INTERVAL_MS, requestedIntervalMs=INTERVAL_MS, adapted=False,
                              schemaEpoch=self._sensors['schemaEpoch'] + 1,
                              standardMask=MASK, extendedMask=0, fieldNames=list(FIELDS))
 

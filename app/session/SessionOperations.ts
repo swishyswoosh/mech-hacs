@@ -1,5 +1,6 @@
 import {
   cockpitSchema,
+  routineTelemetryIntervalMs,
   cockpitQueries,
   cockpitQueryIntervals,
   setCockpitStreamInterval,
@@ -31,8 +32,8 @@ export abstract class SessionOperations extends SessionConnection {
   private telemetryRateUncertain = false;
   private startTelemetryTimer() {
     const needsRateReset = this.cockpitSchemaEpoch === this.connectionEpoch &&
-      (this.cockpitIntervalMs !== 1000 || this.telemetryRateUncertain) &&
-      this.failedTelemetryRate !== `${this.connectionEpoch}:1000`;
+      (this.cockpitIntervalMs !== routineTelemetryIntervalMs || this.telemetryRateUncertain) &&
+      this.failedTelemetryRate !== `${this.connectionEpoch}:${routineTelemetryIntervalMs}`;
     if (this.snapshot.state !== "ready" || this.focusPaused ||
         !(this.cockpitObservers || this.telemetryRates?.size || needsRateReset)) {
       clearInterval(this.cockpitTimer);
@@ -40,7 +41,7 @@ export abstract class SessionOperations extends SessionConnection {
       return;
     }
     if (!this.cockpitTimer) {
-      this.cockpitTimer = setInterval(() => void this.refreshCockpitTelemetry(), 1000);
+      this.cockpitTimer = setInterval(() => void this.refreshCockpitTelemetry(), routineTelemetryIntervalMs);
       (this.cockpitTimer as unknown as { unref?: () => void }).unref?.();
     }
   }
@@ -250,7 +251,7 @@ export abstract class SessionOperations extends SessionConnection {
   }
   private async refreshTelemetryRate() {
     if (this.cockpitSchemaEpoch !== this.connectionEpoch) return;
-    const interval = Math.min(1000, ...this.telemetryRates.values());
+    const interval = Math.min(routineTelemetryIntervalMs, ...this.telemetryRates.values());
     const key = `${this.connectionEpoch}:${interval}`;
     if (this.cockpitIntervalMs === interval && !this.telemetryRateUncertain) {
       this.failedTelemetryRate = undefined;

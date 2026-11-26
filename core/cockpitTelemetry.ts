@@ -2,7 +2,8 @@ import {commands} from './commands.ts';
 import {sensorSchemaFor,installPlannedSensorSchema} from './sensorSchema.ts';
 import {responseView,decodeSensorReading} from './service.ts';
 import type {Command,Packet} from './protocol.ts';
-export const cockpitSchema=sensorSchemaFor([{fields:['attitude.pitch','attitude.roll','attitude.yaw','accelerometer.x','accelerometer.y','accelerometer.z','rawGyroscope.x','rawGyroscope.y','rawGyroscope.z','processorTemperature'],intervalMs:1000}])!;
+export const routineTelemetryIntervalMs=2000;
+export const cockpitSchema=sensorSchemaFor([{fields:['attitude.pitch','attitude.roll','attitude.yaw','accelerometer.x','accelerometer.y','accelerometer.z','rawGyroscope.x','rawGyroscope.y','rawGyroscope.z','processorTemperature'],intervalMs:routineTelemetryIntervalMs}])!;
 export const cockpitQueryIntervals=[5000,10000,5000,5000,60000,60000];
 export const cockpitQueries=[commands.encoderCounts,commands.adc,commands.getHead,commands.getLeg,commands.battery,commands.temperature];
 /** Only the known 3-float attitude stream can be expanded in place. Its old

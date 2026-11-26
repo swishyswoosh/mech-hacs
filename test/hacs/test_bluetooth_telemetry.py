@@ -2,6 +2,7 @@
 import asyncio
 import importlib
 import struct
+import time
 import unittest
 
 from test_bluetooth_protocol import FakeGatt, p
@@ -68,7 +69,7 @@ class TelemetryTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_verified_schema_decodes_real_wire_order_and_readbacks(self):
         await self.reader.refresh()
-        self.assertEqual(self.gatt.stream, (1000, 0, 0x7fc01))
+        self.assertEqual(self.gatt.stream, (2000, 0, 0x7fc01))
         wire = p.encode_packet(24, 2, struct.pack('>10f', 1, 2, 3, 4, 5, 6, 7, 8, 9, 30), 0, flags=0)
         self.gatt.notify(wire)
         snapshot = self.session.snapshot()
@@ -144,7 +145,7 @@ class TelemetryTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(self.gatt.commands, [])
         self.assertEqual(self.reader.snapshot()['sensors']['values'], {})
 
-    async def test_demand_timer_never_polls_faster_than_one_hertz(self):
+    async def test_demand_timer_spaces_reads_two_seconds_apart(self):
         self.reader.set_demand(True)
         await asyncio.sleep(.02)
         first = len(self.gatt.commands)
@@ -152,7 +153,30 @@ class TelemetryTests(unittest.IsolatedAsyncioTestCase):
         await asyncio.sleep(.1)
         self.assertEqual(len(self.gatt.commands), first)
         await asyncio.sleep(.95)
+        self.assertEqual(len(self.gatt.commands), first)
+        await asyncio.sleep(1)
         self.assertEqual(len(self.gatt.commands), first + 1)
+
+    async def test_successful_read_replaces_ping_but_expired_reply_does_not(self):
+        from unittest.mock import patch
+        self.session._cancel_maintenance()
+        with patch.object(time, 'monotonic', return_value=100):
+            await self.reader.refresh()
+        self.gatt.commands.clear()
+        async def maintenance_at(now):
+            ticks = 0
+            async def tick(_interval):
+                nonlocal ticks
+                ticks += 1
+                if ticks > 1:
+                    raise asyncio.CancelledError()
+            with patch.object(p.asyncio, 'sleep', side_effect=tick), patch.object(time, 'monotonic', return_value=now):
+                with self.assertRaises(asyncio.CancelledError):
+                    await self.session._maintain_connection()
+        await maintenance_at(129)
+        self.assertEqual(self.gatt.commands, [])
+        await maintenance_at(131)
+        self.assertTrue(any(c['did'] == 16 and c['cid'] == 0 for c in self.gatt.commands))
 
     async def test_audio_playback_does_not_permanently_starve_readbacks(self):
         await self.reader.refresh()

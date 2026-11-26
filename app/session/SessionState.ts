@@ -1,4 +1,4 @@
-import { cockpitSchema } from "../../core/cockpitTelemetry.ts";
+import { cockpitSchema, routineTelemetryIntervalMs } from "../../core/cockpitTelemetry.ts";
 import { sensorSchemaFor } from "../../core/sensorSchema.ts";
 import type { Command, CommandAccess } from "../../core/index.ts";
 import {
@@ -41,6 +41,7 @@ export abstract class SessionState {
 
   private maintenanceTimer?: ReturnType<typeof setInterval>;
   private maintenanceBusy = false;
+  private lastConnectionReply?: {at: number; epoch: number};
   private batteryService?: SessionBattery;
   protected get sessionBattery() {
     return (this.batteryService ??= new SessionBattery({
@@ -79,6 +80,7 @@ export abstract class SessionState {
     this.sessionBattery.bind(this.droidId, this.droidHardwareId, this.droidName);
   }
   protected captureProfileResponse(packet: import("../../core/protocol.ts").Packet) {
+    this.lastConnectionReply = {at: Date.now(), epoch: this.connectionEpoch};
     this.sessionBattery.response(packet);
     if (packet.did === 19 && packet.cid === 3 && packet.data.length === 2)
       this.publish({
@@ -133,8 +135,8 @@ export abstract class SessionState {
     await this.sessionBattery.model.flush();
     return this.sessionBattery.model.export();
   }
-  /** An idle BLE link still needs outbound traffic. Telemetry is inbound only.
-   * This ping cannot arm motion, renew a source lease, or wake a sleeping droid. */
+  /** Successful command replies maintain connection liveness. An idle link uses
+   * a fallback ping that cannot renew motion ownership or wake a sleeping droid. */
   ensureConnectionMaintenance() {
     if (!this.controller || !["ready", "paused"].includes(this.snapshot.state)) {
       clearInterval(this.maintenanceTimer);
@@ -162,10 +164,15 @@ export abstract class SessionState {
       return;
     this.maintenanceBusy = true;
     const metadata = { type: "command" as const, did: 16, cid: 0, data: [] as number[] };
-    this.telemetry.emit({ ...metadata, phase: "requested" });
+    const reply = this.lastConnectionReply;
+    const age = reply ? Date.now() - reply.at : Infinity;
+    const needsPing = reply?.epoch !== this.connectionEpoch || age < 0 || age >= 30000;
     try {
-      await controller.command(commands.ping());
-      this.telemetry.emit({ ...metadata, phase: "acknowledged" });
+      if (needsPing) {
+        this.telemetry.emit({ ...metadata, phase: "requested" });
+        await controller.command(commands.ping());
+        this.telemetry.emit({ ...metadata, phase: "acknowledged" });
+      }
       await this.sessionBattery.poll();
     } catch (error) {
       this.telemetry.emit({ ...metadata, phase: "failed", error: String(error) });
@@ -204,7 +211,7 @@ export abstract class SessionState {
   protected attitudeAttemptEpoch?: number;
   protected get attitudeSchema() {
     return sensorSchemaFor([
-      { fields: ["attitude.pitch", "attitude.roll", "attitude.yaw"], intervalMs: 100 },
+      { fields: ["attitude.pitch", "attitude.roll", "attitude.yaw"], intervalMs: routineTelemetryIntervalMs },
     ])!;
   }
   /** Re-enable only the exact schema installed on this transport. STOP never

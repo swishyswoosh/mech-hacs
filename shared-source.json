@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "repository": "mech",
-  "commit": "392e4698f8cce3bb52c23786aa66a6536276ea9b",
+  "commit": "4fc558f6a8085695073978605ce008df4df93eb5",
   "files": {
     "THIRD_PARTY_NOTICES.md": "69b88f28c71032e49dfc1f83f137b576e9f9df699682bf7e6ce3637be7cb8be3",
     "app/App.tsx": "2399760a5a4249464348767d677d4f9e194694ad9ebfc71328a329ec4cdd3747",
@@ -112,8 +112,8 @@
     "app/session/ManualMotion.ts": "5a5ed21cf2f7d57da4a08d0d2ae2b0f61b9c4d03b877e19f8e48f3ed71a9ef11",
     "app/session/SessionBattery.ts": "11f58dd73d7447763a454e2f9d95ece8a34b5c02f9b3d9908cdba394e1e08212",
     "app/session/SessionConnection.ts": "015a94d96664c66fb8693349ca4fea61cdafdbe7ccd71572a73c85461e371525",
-    "app/session/SessionOperations.ts": "48391f9da297de5c8748e147d290bd6660d508073e006f6bd00461abbb5a8ae9",
-    "app/session/SessionState.ts": "4ae0bb955a2b7159508644b5eba1926451b28eb953d747bcecd0e1a1cef4f8ad",
+    "app/session/SessionOperations.ts": "fb2dcf5724fe2db220057eb4af192f485d3aa308a58f9f995d6aed94f9e276f2",
+    "app/session/SessionState.ts": "d741f1d0fb224c6a8f70d62199850f3865ad32da0910c79e399bfe7c83fcf600",
     "app/session/WheelMapping.ts": "2c5800938f965a29b74585bc7ab12f6da14b327c60caad6df6a59346812c427c",
     "app/session/compatibility.ts": "08662ca3a912f8969d61149fb76ed5d16a43576b66685f651190199b86b62a2b",
     "app/session/hooks.ts": "b302edcf90e80d947239790fc701095ff899c65d2049c6b04b99669c964e06f4",
@@ -180,7 +180,7 @@
     "core/automationLease.ts": "0692ff1117eb9709c2b5c4beac5960dd37917a5640ba6a5be7af272f16a9fe96",
     "core/batteryProfile.ts": "e6e122001e7c0b1cb00a55163d75ec86774e6cf67ee7d5f0c97b4e85c8cd96fe",
     "core/catalogs.ts": "17391a827aa3a68b7352a61e6970335cbc8f9b26efb2d92e8ced831bd25e4776",
-    "core/cockpitTelemetry.ts": "c9bcc8df0202aa727613f68e4d166ad53962dc5b88f18eda7358024e47cc1ecc",
+    "core/cockpitTelemetry.ts": "c0886ec932a1e292db6c4c13e91e03e907deccc24ab0a16dcb8fd7dddde5b0cb",
     "core/commands.ts": "664a45468b6c7b3336593425dee09dd70294df63a171980cb885a1e64c839053",
     "core/controlValues.ts": "bed1a9ab13230deae5cdadf1ba2c6797eb1e54c790a91e7e1c0b8cbb93947aec",
     "core/controller.ts": "c6fb022f086103db26cd9c6d0aeb99d4a3fd06d070baa83b61f62dd35f765bb5",

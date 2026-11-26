@@ -1,5 +1,6 @@
 """Native Sphero API-v2 transport; no discovery, reconnect or action replay."""
 from __future__ import annotations
+import time
 
 
 def encode_packet(did: int, cid: int, data: bytes, seq: int, flags: int = 0x0a,
@@ -134,6 +135,7 @@ class DroidBluetoothSession:
         self._connecting = None
         self._maintenance_task = None
         self.maintenance_interval = 30.0
+        self._last_connection_reply = None
         self._closed = False
         self._activity = None
         self._unknown_sources = True
@@ -268,6 +270,7 @@ class DroidBluetoothSession:
                         if packet.get('error'):
                             future.set_exception(DroidResponseError(packet))
                         else:
+                            self._last_connection_reply = time.monotonic()
                             future.set_result(packet)
                             if (packet['did'], packet['cid']) == (19, 3) and len(packet['data']) == 2:
                                 volts = int.from_bytes(packet['data'], 'big') / 100
@@ -304,14 +307,15 @@ class DroidBluetoothSession:
             task.cancel()
 
     async def _maintain_connection(self):
-        # Match SessionState's 30-second empty ping. It maintains only an
-        # explicitly opened, healthy session and cannot wake or rearm anything.
+        # Successful command replies replace idle pings without renewing motion.
         while not self._closed and not self._fault:
             await asyncio.sleep(self.maintenance_interval)
             if self._count or self._stop_task or self.motion.active or self._operations.locked():
                 continue
             if self._state['connection'] != 'connected' or self._state['power'] != 'awake' or self._state['control'] != 'ready':
                 return
+            if self._last_connection_reply is not None and time.monotonic() - self._last_connection_reply < self.maintenance_interval:
+                continue
             generation = self._generation
             try:
                 async with self._operations:
